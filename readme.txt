@@ -14,6 +14,8 @@ Search WooCommerce orders fast without having to wait for the page to load betwe
 
 == Description ==
 
+Important: If you have a large amount of orders then it may take longer for the orders page to load initially. We are working on [implementing a better indexing process](https://github.com/PolyPlugins/Admin-Instant-Search/issues/1) which will prevent this from happening. If you wish to still install this plugin while we work on this new process, be sure to test this on your staging environment to see if the speed is acceptable.
+
 When you frequently search various areas of the WordPress admin, you know the page load times between searches can be frustrating. Admin Instant Search makes finding what you're looking for easier and faster by building an index and keeping it updated as new data comes in. This index makes it much faster to search through by only requiring one database call and using JavaScript to filter through the index on the fly. Currently it only has support for WooCommerce orders, but we are working to add support to search customers, posts, pages, users and more.
 
 Currently Supports:
