@@ -1,0 +1,175 @@
+# Copyright (C) 2025 Poly Plugins
+# This file is distributed under the GPL3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Instant Search 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-instant-search\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-31T01:49:33+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: admin-instant-search\n"
+
+#. Plugin Name of the plugin
+#: admin-instant-search.php
+#: includes/classes/Backend/Admin.php:66
+msgid "Admin Instant Search"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: admin-instant-search.php
+msgid "https://www.polyplugins.com/contact/"
+msgstr ""
+
+#. Description of the plugin
+#: admin-instant-search.php
+msgid "Search WooCommerce orders fast without having to wait for the page to load between searches."
+msgstr ""
+
+#. Author of the plugin
+#: admin-instant-search.php
+msgid "Poly Plugins"
+msgstr ""
+
+#. Author URI of the plugin
+#: admin-instant-search.php
+msgid "https://www.polyplugins.com"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:85
+msgid "Admin Instant Search is currently indexing."
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:101
+msgid "Admin Instant Search requires the following extensions:"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:140
+#: includes/classes/Backend/Admin.php:172
+msgid "Enabled?"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:148
+msgid "Characters"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:156
+msgid "Max Characters"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:164
+msgid "Typing Delay"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:180
+msgid "Batch"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:188
+msgid "Result Limit"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:204
+#: includes/classes/Backend/Admin.php:258
+msgid "Yes"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:218
+msgid "How many characters to trigger Admin Instant Search?"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:231
+msgid "Maximum number of characters allowed to be searched?"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:244
+msgid "How many milliseconds between inputs until a search is fired?"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:260
+msgid "Index and show orders in the search?"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:274
+msgid "How many orders should be indexed per minute?"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:288
+msgid "How many orders would you like to show?"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:305
+msgid "Admin Instant Search Settings"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:315
+msgid "General"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:322
+msgid "Orders"
+msgstr ""
+
+#: includes/classes/Backend/Admin.php:329
+#: js/backend/settings.js:31
+msgid "Reindex"
+msgstr ""
+
+#: includes/classes/Backend/Background_Worker.php:75
+msgid "Every Minute"
+msgstr ""
+
+#: includes/classes/Utils.php:146
+#: js/backend/settings.js:45
+msgid "Success"
+msgstr ""
+
+#: includes/classes/Utils.php:163
+#: js/backend/settings.js:53
+#: js/backend/settings.js:192
+msgid "Error"
+msgstr ""
+
+#: js/backend/settings.js:28
+msgid "This will delete all indexes and rebuild them. Are you sure you want to do this?"
+msgstr ""
+
+#: js/backend/settings.js:46
+msgid "Reindexing had begun!"
+msgstr ""
+
+#: js/backend/settings.js:54
+msgid "Reindexing failed to start!"
+msgstr ""
+
+#: js/backend/settings.js:59
+msgid "Error: "
+msgstr ""
+
+#: js/backend/settings.js:100
+msgid "No roles Found"
+msgstr ""
+
+#: js/backend/settings.js:140
+msgid "Select a Background Image"
+msgstr ""
+
+#: js/backend/settings.js:142
+msgid "Use This Image"
+msgstr ""
+
+#: js/backend/settings.js:193
+msgid "The tracking delay is set as "
+msgstr ""
+
+#: js/backend/settings.js:193
+msgid "ms and must be larger than the typing delay of "
+msgstr ""
+
+#: js/backend/settings.js:193
+msgid "ms. Tracking relies on the search results being visible to the user, so if it runs too early before results are loaded it won't capture anything. This separation allows tracking to run in its own AJAX request after the main search, which helps keep the search fast and responsive."
+msgstr ""
