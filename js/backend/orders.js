@@ -48,24 +48,6 @@ jQuery(document).ready(function ($) {
       });
     });
   }
-  
-  function close() {
-    $(document).on("click", function(e) {
-      if (!$(e.target).closest('.speedy-search-container').length) {
-        $(".speedy-search-container .instant-search-section").empty();
-
-        $(".admin-instant-search-input").val('');
-        $(".instant-search-wrapper").hide();
-      }
-    });
-
-    $(".admin-instant-search-close").on("click", function(e) {
-      $(".speedy-search-container .instant-search-section").empty();
-
-      $(".admin-instant-search-input").val('');
-      $(".instant-search-wrapper").hide();
-    });
-  }
 
   function performSearch(query) {
     if ($orderList.length) {
@@ -160,11 +142,6 @@ jQuery(document).ready(function ($) {
         console.error("Search error in " + endpoint + ":", error);
       }
     })
-    .always(function() {
-      $(".speedy-search-container .instant-search-wrapper").show();
-      $(".speedy-search-container .admin-instant-search-close").show();
-      $(".speedy-search-container .loader").hide();
-    });
   }
 
   function formatDate(dateStr) {
