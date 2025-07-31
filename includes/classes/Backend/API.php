@@ -2,10 +2,8 @@
 
 namespace PolyPlugins\Admin_Instant_Search\Backend;
 
-use Automattic\WooCommerce\Utilities\OrderUtil;
 use PolyPlugins\Admin_Instant_Search\TNTSearch;
 use PolyPlugins\Admin_Instant_Search\Utils;
-use WC_Order_Query;
 use WP_REST_Request;
 use WP_REST_Response;
 
@@ -36,7 +34,7 @@ class API {
         array(
           'methods' => 'GET',
           'callback' => array($this, 'get_orders'),
-          'permission_callback' => '__return_true',
+          'permission_callback' => array($this, 'check_permissions')
         )
       );
     }
@@ -123,6 +121,10 @@ class API {
     wp_cache_set($cache_key, $orders_data, 'admin_instant_search_api', 600);
 
     return new WP_REST_Response($orders_data, 200);
+  }
+
+  public function check_permissions() {
+    return current_user_can('manage_woocommerce');
   }
 
 }

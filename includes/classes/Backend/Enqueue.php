@@ -117,6 +117,7 @@ class Enqueue {
    */
   private function enqueue_order_styles() {
     wp_enqueue_style('admin-instant-search-orders', plugins_url('/css/backend/orders.css', $this->plugin), array(), $this->version);
+    wp_enqueue_style('sweetalert2', plugins_url('/css/backend/sweetalert2.min.css', $this->plugin), array(), $this->version);
   }
   
   /**
@@ -137,9 +138,11 @@ class Enqueue {
         array(
           'options'  => $options,
           'currency' => class_exists('WooCommerce') ? get_woocommerce_currency_symbol() : '',
+          'nonce'    => wp_create_nonce('wp_rest'),
         )
       );
       wp_set_script_translations('admin-instant-search-orders', 'admin-instant-search', plugin_dir_path($this->plugin) . '/languages/');
+      wp_enqueue_script('sweetalert2', plugins_url('/js/backend/sweetalert2.all.min.js', $this->plugin), array('jquery'), $this->version, true);
     }
   }
   

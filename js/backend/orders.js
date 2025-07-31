@@ -14,7 +14,6 @@ jQuery(document).ready(function ($) {
 
   const $orderList        = $('#the-list');
   const $searchInput      = $(selector);
-  const $searchForm       = $searchInput.closest("form");
   const typingDelay       = typing_delay;
 
   init();
@@ -38,12 +37,10 @@ jQuery(document).ready(function ($) {
 
         if (query.length >= characters) {
           typingTimer = setTimeout(function () {
-            // $container.find(".instant-search-wrapper").show();
             performSearch('orders');
           }, typingDelay);
         } else {
           // Could show a message like: "Keep typing..."
-          // $container.find(".instant-search-wrapper").hide();
         }
       });
     });
@@ -74,18 +71,21 @@ jQuery(document).ready(function ($) {
       url: "/wp-json/admin-instant-search/v1/" + endpoint,
       data: { search: query },
       dataType: "json",
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', admin_instant_search_object.nonce);
+      },
       success: function (data) {
-        console.log(data)
-
         if (!data.length) {
           $orderList.removeClass('skeleton-loading');
-          alert('no results found')
-        } else {
 
-          console.log(data)
+          Swal.fire({
+            title: "Error!",
+            text: "No results found!",
+            icon: "error"
+          });
+        } else {
           $orderList.empty(); // Clear existing rows
           $orderList.removeClass('skeleton-loading');
-          console.log('test')
           data.forEach(function(order) {
             var row = `
               <tr id="order-${order.id}" class="order-${order.id} type-shop_order status-${order.order_status}">
@@ -139,7 +139,13 @@ jQuery(document).ready(function ($) {
         }
       },
       error: function (xhr, status, error) {
-        console.error("Search error in " + endpoint + ":", error);
+        Swal.fire({
+          title: "Error!",
+          text: "A server error occurred, reverted to original orders.",
+          icon: "error"
+        });
+
+        $orderList.removeClass('skeleton-loading');
       }
     })
   }
