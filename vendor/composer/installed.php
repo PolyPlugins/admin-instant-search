@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '012525b4f5fd6533c37b57d8998499e112562349',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '012525b4f5fd6533c37b57d8998499e112562349',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'predis/predis' => array(
+            'pretty_version' => 'v2.3.0',
+            'version' => '2.3.0.0',
+            'reference' => 'bac46bfdb78cd6e9c7926c697012aae740cb9ec9',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../predis/predis',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'teamtnt/tntsearch' => array(
+            'pretty_version' => 'v5.0.1',
+            'version' => '5.0.1.0',
+            'reference' => '1a86ca3431dce7fcd816b153d5a340f5665bf40e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../teamtnt/tntsearch',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
