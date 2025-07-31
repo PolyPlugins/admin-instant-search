@@ -28,21 +28,17 @@ jQuery(document).ready(function ($) {
 
     if (!$searchInput.length) return;
 
-    $searchInput.each(function () {
-      let $input = $(this);
+    $searchInput.on("input", function () {
+      clearTimeout(typingTimer);
+      const query = $.trim($searchInput.val());
 
-      $input.on("input", function () {
-        clearTimeout(typingTimer);
-        const query = $.trim($input.val());
-
-        if (query.length >= characters) {
-          typingTimer = setTimeout(function () {
-            performSearch('orders');
-          }, typingDelay);
-        } else {
-          // Could show a message like: "Keep typing..."
-        }
-      });
+      if (query.length >= characters) {
+        typingTimer = setTimeout(function () {
+          performSearch(query);
+        }, typingDelay);
+      } else {
+        // Could show a message like: "Keep typing..."
+      }
     });
   }
 

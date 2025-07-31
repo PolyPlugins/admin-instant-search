@@ -84,7 +84,7 @@ class API {
     $tnt->fuzziness = true;
 
     // Perform the search
-    $results = $tnt->search($search_query, $result_limit);
+    $results    = $tnt->search($search_query, $result_limit);
     $result_ids = isset($results['ids']) ? array_map('absint', $results['ids']) : array();
 
     if (empty($result_ids)) {
