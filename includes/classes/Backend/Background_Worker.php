@@ -86,7 +86,7 @@ class Background_Worker {
    */
   public function maybe_index_orders($post_type) {
     $type    = $post_type . 's';
-    $options = Utils::get_option($type);
+    $options = Utils::get_option('orders');
     $enabled = isset($options['enabled']) ? $options['enabled'] : 1;
 
     $index                = Utils::get_index($type);

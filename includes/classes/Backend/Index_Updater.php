@@ -20,7 +20,12 @@ class Index_Updater {
   }
 
   public function init() {
-    add_action('woocommerce_thankyou', array($this, 'add_new_order_to_index'));
+    $options = Utils::get_option('orders');
+    $enabled = isset($options['enabled']) ? $options['enabled'] : 1;
+
+    if ($enabled) {
+      add_action('woocommerce_thankyou', array($this, 'add_new_order_to_index'));
+    }
   }
 
   /**

@@ -3,7 +3,7 @@ Contributors: polyplugins
 Donate link: 
 Tags: instant order search, woocommerce, wp, instant search, admin instant search
 Requires at least: 6.5
-Tested up to: 6.7
+Tested up to: 6.8
 Stable tag: 1.1.0
 Requires PHP: 7.4
 License: GPLv3
@@ -14,30 +14,37 @@ Search WooCommerce orders fast without having to wait for the page to load betwe
 
 == Description ==
 
-Important: If you have a large amount of orders then it may take longer for the orders page to load initially. We are working on [implementing a better indexing process](https://github.com/PolyPlugins/Admin-Instant-Search/issues/1) which will prevent this from happening. If you wish to still install this plugin while we work on this new process, be sure to test this on your staging environment to see if the speed is acceptable.
-
 When you frequently search various areas of the WordPress admin, you know the page load times between searches can be frustrating. Admin Instant Search makes finding what you're looking for easier and faster by building an index and keeping it updated as new data comes in. This index makes it much faster to search through by only requiring one database call and using JavaScript to filter through the index on the fly. Currently it only has support for WooCommerce orders, but we are working to add support to search customers, posts, pages, users and more.
 
-Currently Supports:
+== Currently Supports ==
 
 * Instantly Searching WooCommerce Orders
 
-Features:
+== Features ==
 
 * Search through all orders instantly without requiring multiple page loads
 * Builds an index of all orders and stores them in your database
-* Only requires one initial query to the database in order to fetch the index, which means no loading times between searches
 * Ability to adjust the batch size for the initial index so smaller servers don't get overloaded
 
-Road Map:
+== Road Map ==
 
-* Add Caching
 * Add support for instantly searching WordPress Posts
 * Add support for instantly searching WordPress Pages
 * Add support for instantly searching WordPress Users
 * Add support for instantly searching WooCommerce Customers
-* Add support for instantly searching WooCommerce Customers
 * Add support for instantly searching Settings
+
+== GDPR ==
+
+We are not lawyers and always recommend doing your own compliance research into third-party plugins, libraries, etc., as we've seen other plugins not be in compliance with these regulations.
+
+This plugin uses the Bootstrap, BootStrap Icons, and SweetAlert2 third-party libraries. These libraries are loaded locally to be compliant with data protection regulations. This plugin also uses TNTSearch.
+
+This plugin collects and stores certain data on your server to ensure proper functionality. This includes:
+
+* Storing plugin settings
+* Remembering which notices have been dismissed
+* Storing order data on your server
 
 
 == Installation ==
@@ -62,6 +69,18 @@ By default it will index 100 orders per minute.
 
 == Screenshots ==
 
-1. Instant Order Search Button
-2. Instant Order Search
+1. Instant Order Search General Setting
+2. Instant Order Search Order Settings
+
+
+
+== Changelog ==
+
+= 1.1.0 =
+* Updated: Indexing to use TNTSearch
+* Updated: Logic for search to handle updating results already shown on the search page
+* Added: Translation
+
+= 1.0.0 =
+* Initial Release
 

@@ -11,7 +11,6 @@ When you frequently search various areas of the WordPress admin, you know the pa
 
 * Search through all orders instantly without requiring multiple page loads
 * Builds an index of all orders and stores them in your database
-* Only requires one initial query to the database in order to fetch the index, which means no loading times between searches
 * Ability to adjust the batch size for the initial index so smaller servers don't get overloaded
 
 ## Road Map
@@ -19,6 +18,7 @@ When you frequently search various areas of the WordPress admin, you know the pa
 * Add support for instantly searching WordPress Posts
 * Add support for instantly searching WordPress Pages
 * Add support for instantly searching WordPress Users
+* Add support for instantly searching WooCommerce Customers
 * Add support for instantly searching Settings
 
 ## GDPR
@@ -54,6 +54,11 @@ If you find yourself auditing orders, looking up orders for customer inquiries, 
 By default it will index 100 orders per minute.
 
 ## Changelog
+
+### 1.1.0
+* Updated: Indexing to use TNTSearch
+* Updated: Logic for search to handle updating results already shown on the search page
+* Added: Translation
 
 ### 1.0.0
 * Initial Release
