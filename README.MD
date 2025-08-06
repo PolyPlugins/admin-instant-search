@@ -56,6 +56,9 @@ By default it will index 100 orders per minute.
 
 ## Changelog
 
+### 1.1.1
+* Bugfix: Index updater fails
+
 ### 1.1.0
 * Updated: Indexing to use TNTSearch
 * Updated: Logic for search to handle updating results already shown on the search page

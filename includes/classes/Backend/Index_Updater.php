@@ -36,7 +36,7 @@ class Index_Updater {
    * @param bool    $update
    * @return void
    */
-  public function update_index($order_id) {
+  public function add_new_order_to_index($order_id) {
     $order = wc_get_order($order_id);
 
     // Select or create the appropriate index
