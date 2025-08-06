@@ -4,7 +4,7 @@ Donate link:
 Tags: instant order search, woocommerce, wp, instant search, admin instant search
 Requires at least: 6.5
 Tested up to: 6.8
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires PHP: 7.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -75,6 +75,9 @@ By default it will index 100 orders per minute.
 
 
 == Changelog ==
+
+= 1.1.1 =
+* Bugfix: Index updater fails
 
 = 1.1.0 =
 * Updated: Indexing to use TNTSearch

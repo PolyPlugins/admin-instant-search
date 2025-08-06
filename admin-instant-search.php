@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Admin Instant Search
  * Description: Search WooCommerce orders fast without having to wait for the page to load between searches.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: Poly Plugins
